@@ -34,11 +34,11 @@
 
 
 $funStyle [It&#39;s time to wake up, please wake up now.]
-
-[[please]]
-
-
-
+(if: $awake &gt;4 ) [
+[[thank you]]
+](else:)[
+ [[please]]
+]
 
 
 
@@ -46,7 +46,7 @@ $funStyle [It&#39;s time to wake up, please wake up now.]
 [[get out of bed]]
 [[just sleep]]
 
-(click:?sad) [(replace:?sad) [horrible]]</tw-passagedata><tw-passagedata pid="3" name="just sleep" tags="" position="403.3333333333333,30" size="100,100">Please understand, you can&#39;t stay in (colour: #3CB371) [bed] all day....
+(click:?sad) [(replace:?sad) [horrible]]</tw-passagedata><tw-passagedata pid="3" name="just sleep" tags="" position="101.66666666666663,496.6666666666667" size="100,100">Please understand, you can&#39;t stay in (colour: #3CB371) [bed] all day....
 [[stay asleep-&gt;stay asleep]]  
 [[wake up-&gt;wake up]]
 (if: $awake &gt; 1) [
@@ -54,7 +54,7 @@ $funStyle [It&#39;s time to wake up, please wake up now.]
 ](else:)[
  please wake up 
 ]
-</tw-passagedata><tw-passagedata pid="4" name="walk out of the room" tags="" position="99.99999999999993,1198.3333333333333" size="100,100">you stand at your front door, dust on the door handle beckons to you like a (colour: #BA55D3) [threat] or (colour: #2F4F4F) [challenge] .
+</tw-passagedata><tw-passagedata pid="4" name="walk out of the room" tags="" position="116.6666666666666,931.6666666666665" size="100,100">you stand at your front door, dust on the door handle beckons to you like a (colour: #BA55D3) [threat] or (colour: #2F4F4F) [challenge] .
 but you have to make this decision on your own right?
 [[right?]]</tw-passagedata><tw-passagedata pid="5" name="get out of bed" tags="" position="575,435" size="100,100">see, we did it, small victories. lets try to [[shower]] or maybe [[brush our teeth]]?
 
@@ -69,7 +69,7 @@ $funStyle [you clear off the fog from the mirror] to take a look at
 you sink down to the floor, the sadness is something you carry with you and sometimes you cannot leave the (colour: #008080) [house] this does not mean you&#39;re a [failure]&lt;failure| 
 (click:?failure) [(replace:?failure) [waste of space]]
 
-you finish your morning chores and now it is time to decide if you go to [[work]] or go [[back to bed-&gt;tuesday]]  </tw-passagedata><tw-passagedata pid="7" name="brush our teeth" tags="" position="201.66666666666669,496.66666666666663" size="100,100">you stare at the mirror, your outline (colour: #696969)[pale] in the morning light. all the curtins in your (colour: #008080) [house] cover the windows, casting long shadows from what small light does filter in. After you bursh your teeth you go to [[shower]].
+you finish your morning chores and now it is time to decide if you go to [[work]] or go [[back to bed-&gt;tuesday]]  </tw-passagedata><tw-passagedata pid="7" name="brush our teeth" tags="" position="320,466.66666666666663" size="100,100">you stare at the mirror, your outline (colour: #696969)[pale] in the morning light. all the curtins in your (colour: #008080) [house] cover the windows, casting long shadows from what small light does filter in. After you bursh your teeth you go to [[shower]].
 
 </tw-passagedata><tw-passagedata pid="8" name="please" tags="" position="38.3333333333333,256.6666666666667" size="100,100">
 (set:$awake to 0)
@@ -78,13 +78,13 @@ you finish your morning chores and now it is time to decide if you go to [[work]
 
 $funStyle [It&#39;s time to wake up, please wake up now.]
 
-[[please, please wakeup-&gt;wake up]] 
+[[please, please wake up-&gt;wake up]] 
 [[just sleep]]</tw-passagedata><tw-passagedata pid="9" name="work" tags="" position="266.6666666666667,881.6666666666666" size="100,100">you work from home, havent left your (colour: #008080) [house] in a few years. you like your job, your boss is very kind and sometimes when you can&#39;t get out of bed he doesn&#39;t mind. 
 but today you decide to get some work done, you sit at your computer and start to type of scripts for the next project. 
-soon, lunch times rolls around and you&#39;ve forgotten to eat since yesterday, you walk to the fridge to decide to [[make food]] but you could also just [[order]] food again</tw-passagedata><tw-passagedata pid="10" name="make food" tags="" position="796.6666666666667,621.6666666666666" size="100,100">you make a sandwhich that isnt particularly great nor tasty..and walk back to your computer to finish up the script for the day. it&#39;s okay, youve done good today. 
+soon, lunch times rolls around and you&#39;ve forgotten to eat since yesterday, you walk to the fridge to decide to [[make food]] but you could also just [[order]] food again</tw-passagedata><tw-passagedata pid="10" name="make food" tags="" position="800.0000000000001,598.3333333333333" size="100,100">you make a sandwich that isn&#39;t particularly great nor tasty..and walk back to your computer to finish up the script for the day. it&#39;s okay, youve done good today. 
 you can now
-[[go back to bed-&gt;tuesday]] or [[try to walk outside]]</tw-passagedata><tw-passagedata pid="11" name="order" tags="" position="591.6666666666666,990" size="100,100">you decide to order food, you hate everything you cook anyway. you walk back into your bedroom, confronted with the choice to [[go back to bed-&gt;stay asleep]]  again. instead you [[try to walk outside]]</tw-passagedata><tw-passagedata pid="12" name="try to walk outside" tags="" position="811.6666666666667,291.66666666666663" size="100,100">its okay if you cant, i mean you&#39;ve tried so many times already.....
-[[go to bed-&gt;tuesday]]  you can try again tomorrow. </tw-passagedata><tw-passagedata pid="13" name="right?" tags="" position="314.99999999999994,1301.6666666666667" size="100,100">(set:$awake to 0)
+[[go back to bed-&gt;tuesday]] or [[try to walk outside]]</tw-passagedata><tw-passagedata pid="11" name="order" tags="" position="591.6666666666666,990" size="100,100">you decide to order food, you hate everything you cook anyway. you walk back into your bedroom, confronted with the choice to [[go back to bed-&gt;stay asleep]]  again. instead you [[try to walk outside]]</tw-passagedata><tw-passagedata pid="12" name="try to walk outside" tags="" position="730.0000000000001,261.66666666666663" size="100,100">its okay if you cant, i mean you&#39;ve tried so many times already.....
+[[go to bed-&gt;tuesday]]  you can try again tomorrow. </tw-passagedata><tw-passagedata pid="13" name="right?" tags="" position="331.66666666666663,1035" size="100,100">(set:$awake to 0)
 (set: $funStyle to (text-style:&quot;blurrier&quot;))
 
 
@@ -99,7 +99,7 @@ $funStyle[it&#39;s tuesday if you&#39;re able to get up now]
 (set: $funStyle to (text-style:&quot;blink&quot;))
 $funStyle [[your alarm goes off]]
 
-or, you can go back to [[just sleep]]</tw-passagedata><tw-passagedata pid="15" name="wednesday" tags="" position="2400,0" size="100,100">(set: $funStyle to (text-style:&quot;blurrier&quot;))
+or, you can go back to [[just sleep]]</tw-passagedata><tw-passagedata pid="15" name="wednesday" tags="" position="2398.3333333333335,0" size="100,100">(set: $funStyle to (text-style:&quot;blurrier&quot;))
 
 
 $funStyle [miss, miss; are you okay?]
@@ -150,16 +150,16 @@ he hands you the package and you close the door.
 &amp;emsp;&amp;emsp;the return address is for your father&#39;s  (colour: #008080) [house]. 
 
 you leave the package at the door and walk to the kitchen to [[get some food.]]
-</tw-passagedata><tw-passagedata pid="20" name="get some food." tags="" position="1501.6666666666667,575" size="100,100">You make your way to the kitchen, there’s left over shredded (colour: #FFFF00)[cheese] in the fridge. You jump on the counter top and just eat the (colour: #FFFF00) [cheese] from the bag; you have to order more groceries for the week there&#39;s only some bread and (colour: #FFFF00) [cheese] left over. 
-Your phone rings, it&#39;s your father. You walk over to the phone and stare at the blinking screen. You pick up your [[phone]].</tw-passagedata><tw-passagedata pid="21" name="bed" tags="" position="1700,200" size="100,100">you stay in (colour: #3CB371) [bed] today, the sunlight drifting in through your window. 
+</tw-passagedata><tw-passagedata pid="20" name="get some food." tags="" position="1501.6666666666667,575" size="100,100">you make your way to the kitchen, there’s left over shredded (colour: #FFFF00)[cheese] in the fridge. You jump on the counter top and just eat the (colour: #FFFF00) [cheese] from the bag; you have to order more groceries for the week there&#39;s only some bread and (colour: #FFFF00) [cheese] left over. 
+your phone rings, it&#39;s your father. You walk over to the phone and stare at the blinking screen. You pick up your [[phone]].</tw-passagedata><tw-passagedata pid="21" name="bed" tags="" position="1700,200" size="100,100">you stay in (colour: #3CB371) [bed] today, the sunlight drifting in through your window. 
 you drift in and out of sleep, never sleeping long enough for real rest but enough to make you feel better about staying in (colour: #3CB371) [bed]. 
 
 when you finally decide to get up it is [[night]]</tw-passagedata><tw-passagedata pid="22" name="night" tags="" position="1700,325" size="100,100">you open your window and hear the sounds of the forest outside. the chirps of birds and a hoot of an owl echos though your small bedroom. 
 
 your (colour: #008080) [house] is empty, it has been for awhile. 
 
-[[ghosts]] haunt the halls, you grew up here but everything seems hazy and you often find yourself lost in this (colour: #000080) [house].</tw-passagedata><tw-passagedata pid="23" name="ghosts" tags="" position="1700,450" size="100,100">(set: $funStyle to (text-style:&quot;smear&quot;))
-You leave the $funStyle [ghost] behind and make your way to the kitchen, there’s left over shredded (colour #FFFF00) [cheese] in the fridge. You jump on the counter top and just eat the cheese from the bag; you have to order more groceries for the week theres only some bread and cheese left over. 
+[[ghosts]] haunt the halls, you grew up here but everything seems hazy and you often find yourself lost in this (colour: #000080) [house].</tw-passagedata><tw-passagedata pid="23" name="ghosts" tags="" position="1698.3333333333333,450" size="100,100">(set: $funStyle to (text-style:&quot;smear&quot;))
+You leave the $funStyle [ghost] behind and make your way to the kitchen, there’s left over shredded (colour #FFFF00) [cheese] in the fridge. You jump on the counter top and just eat the (colour: #FFFF00) [cheese] from the bag; you have to order more groceries for the week theres only some bread and (colour: #FFFF00) [cheese] left over. 
 
 you walk to your laptop and start to order groceries to be delivered, you hope that they won&#39;t ask for a signature so you can just collect the bags after the delivery person has left.  
 
@@ -214,7 +214,7 @@ you write poetry in your spare time to help.
 [[Alone on a shore at 3am ]]</tw-passagedata><tw-passagedata pid="28" name="always" tags="" position="1500,850" size="100,100">its not your fault, you lost something and sought sanctuary here. in this old (colour: #008080) [house] your family left behind years ago, things never change. holding on to the past so hard it threatens to consume you whole. wandering the dust filled corpse of the (colour: #FF0000)[home]. 
 
 
-you wander back to your room, and go to sleep; tomorrow will be [[wednesday]]</tw-passagedata><tw-passagedata pid="29" name="i cannot exist today" tags="" position="805,1405" size="100,100">	If you are reading this, 					I do not exist today.
+you wander back to your room, and go to sleep; tomorrow will be [[wednesday]]</tw-passagedata><tw-passagedata pid="29" name="i cannot exist today" tags="" position="516.6666666666666,1318.3333333333333" size="100,100">	If you are reading this, 					I do not exist today.
 
 	My cat decided to invade 					Russia in the winter.
 
@@ -251,7 +251,7 @@ runs through my body every waking moment, the quiet storm that builds and builds
 
 (set:$awake to it +1)
 
-[[wake up-&gt;stay asleep]] </tw-passagedata><tw-passagedata pid="30" name="Alone on a shore at 3am " tags="" position="1600,1400" size="100,100">
+[[wake up-&gt;stay asleep]] </tw-passagedata><tw-passagedata pid="30" name="Alone on a shore at 3am " tags="" position="1620,1165" size="100,100">
 
 
 Wind whispering past my ears while I
@@ -292,7 +292,7 @@ You’re already home
  (set:$awake to it +1)
 
  [[wake up-&gt;stay asleep]] 
-</tw-passagedata><tw-passagedata pid="31" name="seeking salvation" tags="" position="2098.3333333333335,1405" size="100,100">						
+</tw-passagedata><tw-passagedata pid="31" name="seeking salvation" tags="" position="2115,1138.3333333333333" size="100,100">						
 
 
 Whispers &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Notforyounotforyounotforyounotfo-
@@ -343,13 +343,13 @@ you get up, the young man looking very concerned,
 
 you steady yourself then move to pick up the bag that he set down next to you, &quot;follow me then, how many bags is it?&quot;
 
-[[6]]</tw-passagedata><tw-passagedata pid="34" name="I&#39;m not okay" tags="" position="2400,375" size="100,100">i&#39;m 
-[[seeking salvation]] </tw-passagedata><tw-passagedata pid="35" name="6" tags="" position="2500,1400" size="100,100">you lead him to the kitchen and thank him for helping you. You reassure him that it really is fine, you sleep walk sometimes. 
+[[6]]</tw-passagedata><tw-passagedata pid="34" name="I&#39;m not okay" tags="" position="2398.3333333333335,375" size="100,100">i&#39;m 
+[[seeking salvation]] </tw-passagedata><tw-passagedata pid="35" name="6" tags="" position="2516.6666666666665,1138.3333333333333" size="100,100">you lead him to the kitchen and thank him for helping you. You reassure him that it really is fine, you sleep walk sometimes. 
 
 you sigh and look at all six bags, slowly start putting the 
 (colour: #FF0000)[apples]
-(colour: #FFFF00) [bananas]
 (colour: #8B4513) [bread]
+(colour: #FFFF00) [cheese]
 and others away; 
 staring off into nothingness as you put the food away
 
@@ -366,12 +366,26 @@ you hear &amp;emsp;birds outside...
 
 
 
-[[birds]]</tw-passagedata><tw-passagedata pid="37" name="birds" tags="" position="1175,1376.6666666666665" size="100,100">(set:$awake to it +1)
+[[birds]]</tw-passagedata><tw-passagedata pid="37" name="birds" tags="" position="1191.6666666666667,1109.9999999999998" size="100,100">(set:$awake to it +1)
 Birds Talking Too Fast
 As I get up in the morning before the sunrises to shake the night time dew from my eyes birds talking too fast to also wake the neighbors who rummaged around upstairs I hear the footsteps too loudly in the soft cold days of spring as I count the days that I will be moving from this small one bedroom apartment that I share with the birds talking too fast the soft beeps of my phone alarm that I yet again ignore because I am already awake the soft piano chimes almost in rhythm with the birds talking too fast the neighbors that live above me start yelling at each other again almost mimicking what’s it is like to be married but the birds are talking too fast to let the night go softly as morning runs far too quickly over the horizon as the birds talking too fast brushing away the curtains and letting the liquid UV inside watching dust sprinkle through the air getting up to face the day with cold surrender as the birds talking too fast pouring a cup of damn fine coffee to help usher in a new morning of dread as I realize I need to pay rent as the birds are talking too fast I finally silence my phone alarm tossing it away without reading or checking the missed phone calls from the night before as the birds talking too fast children start running around outside in the parking lot of the school unknowingly chasing off the birds that talk too fast but they stay by my windowsill as I water the plants that are probably already dead due to my inability to remember to water them looking somber over my disarray of plant life this soft liquid UV filtering through my eyes to show me a new day of life and potential happiness that i sometimes feel will be overshadowed by the overwhelming doubt and anger that often appears like storm clouds on the horizon that darkens way to quickly as the world comes crashing down around me yet again as I stand there sipping coffee as the birds talking too fast their heart beats sing as one giving strength to one another as they face another morning.  
 [[wake up-&gt;stay asleep]] 
 
 
+</tw-passagedata><tw-passagedata pid="38" name="thank you" tags="" position="498.33333333333337,23.33333333333325" size="100,100">thank you, Aaron, my turtleduck, for supporting me in my endeavors though Graduate School and our shared life, I love you. 
+
+more thanks needs to be given to: 
+&amp;emsp; (colour: #6F01FE) [Austin,] 
+&amp;emsp;&amp;emsp; (colour: #FFFFFF) [Dom,] 
+&amp;emsp;&amp;emsp;&amp;emsp;(colour: #FF00FF)[Everett]
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;(colour: #EE82EE)[Franco,] 
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;(colour: #25a2d5)[Gabe,] 
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;(colour: #FFFFFF)[Ian,] 
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;(colour: #FFFFFF)[Jacob,] 
+
+thank you for being play testers and the best friends i could ask for 
+
+with the birds, i share, this Lovely View
 </tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
